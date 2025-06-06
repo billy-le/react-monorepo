@@ -8,6 +8,15 @@
     },
     {
       "path": "./apps/react-store"
+    },
+    {
+      "path": "./libs/products"
+    },
+    {
+      "path": "./libs/orders"
+    },
+    {
+      "path": "./libs/shared/ui"
     }
   ]
 }

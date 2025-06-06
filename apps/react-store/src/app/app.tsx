@@ -1,26 +1,21 @@
 import NxWelcome from './nx-welcome';
 
 import { Route, Routes, Link } from 'react-router-dom';
+import { Products } from '@react-monorepo/products';
+import { Orders } from '@react-monorepo/orders';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="@react-monorepo/react-store" />
-
-      {/* START: routes */}
-      {/* These routes and navigation have been generated for you */}
-      {/* Feel free to move and update them to fit your needs */}
-      <br />
-      <hr />
-      <br />
-      <div role="navigation">
-        <ul>
+      <div role="navigation" className='mb-10'>
+        <ul className="flex gap-4">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/"><h1>Home</h1></Link>
           </li>
           <li>
-            <Link to="/page-2">Page 2</Link>
+            <Link to="/products">Products</Link>
           </li>
+          <li><Link to="/orders">Orders</Link></li>
         </ul>
       </div>
       <Routes>
@@ -28,19 +23,13 @@ export function App() {
           path="/"
           element={
             <div>
-              This is the generated root route.{' '}
-              <Link to="/page-2">Click here for page 2.</Link>
+              This is the generated root route.
             </div>
           }
         />
-        <Route
-          path="/page-2"
-          element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-            </div>
-          }
-        />
+        <Route path='/products' element={<Products />} />
+        <Route path='/orders' element={<Orders />} />
+
       </Routes>
       {/* END: routes */}
     </div>
