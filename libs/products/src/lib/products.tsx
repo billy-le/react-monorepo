@@ -5,7 +5,7 @@ const products = ['hammer', 'nails', 'wrench', 'screwdriver'];
 export function Products() {
   return (
     <div >
-      <h1>Welcome to Products!</h1>
+      <h1>We have many products for you!</h1>
       <Ui data={products} />
     </div>
   );
